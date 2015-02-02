@@ -14,6 +14,8 @@ public class MovementController : MonoBehaviour {
     public Transform rightHand;
     public Transform cam;
 
+    private Vector3 jumpMove = Vector3.zero;
+
     private Transform nextFoot = null;
     private float timeClimb = 0.0f;
     private float distToClimb = 0.0f;
@@ -32,9 +34,9 @@ public class MovementController : MonoBehaviour {
     private void Climb()
     {
         timeClimb += Time.deltaTime;
-        if (timeClimb < 1.40f)
-            transform.position = new Vector3(transform.position.x, transform.position.y + ((distToClimb / 1.40f) * Time.deltaTime), transform.position.z);
-        else if (timeClimb > 1.40f && timeClimb < 3.0f)
+        if (timeClimb < 0.7f)
+            transform.position = new Vector3(transform.position.x, transform.position.y + ((distToClimb / 0.7f) * Time.deltaTime), transform.position.z);
+        else if (timeClimb > 0.7f && timeClimb < 1.5f)
             transform.position += transform.forward * Time.deltaTime;
     }
 
@@ -51,23 +53,34 @@ public class MovementController : MonoBehaviour {
         else
         {
             GetComponent<MouseLook>().enabled = true;
-        }
 
-        this.HandleAnimation();
+            this.HandleAnimation();
 
-        Vector3 move;
+            Vector3 move;
 
-        if (Input.GetButtonDown("Jump"))
-            move = new Vector3(Input.GetAxis("Horizontal"), jump, Input.GetAxis("Vertical"));
-        else
             move = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
 
-        move.Normalize();
-        move = transform.TransformDirection(move);
+            move.Normalize();
+            move = transform.TransformDirection(move);
 
-        float speed = Input.GetKey(KeyCode.LeftShift) ? speedRunning : speedWalking;
+            float speed = (Input.GetButton("Fire1") || Input.GetAxis("Fire1") > 0.0f) ? speedRunning : speedWalking;
 
-        control.SimpleMove(move * speed);
+            control.SimpleMove(move * speed);
+
+            print(jumpMove.y);
+
+            if (this.isGrounded())
+            {
+                jumpMove.y = 0.0f;
+                if (Input.GetButton("Jump") || Input.GetAxis("Jump") > 0.0f)
+                    jumpMove.y = jump;
+            }
+            if (this.isGrounded() == false || jumpMove.y > 0.0f)
+            {
+                jumpMove.y += Time.deltaTime * Physics.gravity.y;
+                control.Move(jumpMove * Time.deltaTime);
+            }
+        }
     }
 
     private void    HandleAnimation()
@@ -77,7 +90,7 @@ public class MovementController : MonoBehaviour {
 
         if (this.isGrounded())
         {
-            if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetButton("Fire1") || Input.GetAxis("Fire1") > 0.0f)
             {
                 if (Input.GetAxis("Vertical") != 0.0f || Input.GetAxis("Horizontal") != 0.0f)
                     animator.SetInteger("isRunning", 1);
