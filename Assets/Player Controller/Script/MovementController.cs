@@ -17,7 +17,7 @@ public class MovementController : MonoBehaviour {
     private Vector3 jumpMove = Vector3.zero;
 
     private Transform nextFoot = null;
-    private float timeClimb = 0.0f;
+    private float timeClimb = 20.0f;
     private float distToClimb = 0.0f;
 
 	// Use this for initialization
@@ -34,9 +34,9 @@ public class MovementController : MonoBehaviour {
     private void Climb()
     {
         timeClimb += Time.deltaTime;
-        if (timeClimb < 0.7f)
-            transform.position = new Vector3(transform.position.x, transform.position.y + ((distToClimb / 0.7f) * Time.deltaTime), transform.position.z);
-        else if (timeClimb > 0.7f && timeClimb < 1.5f)
+        if (timeClimb < 0.6f)
+            transform.position = new Vector3(transform.position.x, transform.position.y + ((distToClimb / 0.6f) * Time.deltaTime), transform.position.z);
+        else if (timeClimb > 0.6f && timeClimb < 1.4f)
             transform.position += transform.forward * Time.deltaTime;
     }
 
@@ -45,7 +45,7 @@ public class MovementController : MonoBehaviour {
     {
         AnimatorStateInfo state = animator.GetCurrentAnimatorStateInfo(0);
 
-        if (state.IsName("Base Layer.Climb"))
+        if (state.IsName("Base Layer.Climb") || timeClimb == 0.0f)
         {
             GetComponent<MouseLook>().enabled = false;
             this.Climb();
@@ -66,8 +66,6 @@ public class MovementController : MonoBehaviour {
             float speed = (Input.GetButton("Fire1") || Input.GetAxis("Fire1") > 0.0f) ? speedRunning : speedWalking;
 
             control.SimpleMove(move * speed);
-
-            print(jumpMove.y);
 
             if (this.isGrounded())
             {
@@ -107,13 +105,14 @@ public class MovementController : MonoBehaviour {
     {
        if (coll.CompareTag("TriggerClimb"))
        {
-           if (Physics.Raycast(cam.position, transform.forward, 1.0f) || Physics.Raycast(foot.position, transform.forward, 1.0f))
-            {
-                animator.SetTrigger("isClimbing");
-                nextFoot = coll.GetComponentInChildren<Transform>();
-                timeClimb = 0.0f;
-                distToClimb = nextFoot.position.y - foot.position.y + 1.5f;
-            }
+           if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Base Layer.Climb"))
+            if (Physics.Raycast(cam.position, transform.forward, 1.0f) || Physics.Raycast(foot.position, transform.forward, 1.0f))
+                {
+                    animator.SetTrigger("isClimbing");
+                    nextFoot = coll.GetComponentInChildren<Transform>();
+                    timeClimb = 0.0f;
+                    distToClimb = nextFoot.position.y - foot.position.y + 1.5f;
+                }
        }
     }
 }
