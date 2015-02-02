@@ -63,14 +63,14 @@
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Unity3D 4.6/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
- <Reference Include="ProCore">
- <HintPath>D:/MesDocuments/GitHub/Cube/Assets/ProCore/Shared/Code/ProCore.dll</HintPath>
- </Reference>
  <Reference Include="ProBuilderCore">
  <HintPath>D:/MesDocuments/GitHub/Cube/Assets/ProCore/Prototype/Classes/ProBuilderCore.dll</HintPath>
  </Reference>
  <Reference Include="ProBuilderMeshOps">
  <HintPath>D:/MesDocuments/GitHub/Cube/Assets/ProCore/Prototype/Classes/ProBuilderMeshOps.dll</HintPath>
+ </Reference>
+ <Reference Include="ProCore">
+ <HintPath>D:/MesDocuments/GitHub/Cube/Assets/ProCore/Shared/Code/ProCore.dll</HintPath>
  </Reference>
  <Reference Include="SixBySeven">
  <HintPath>D:/MesDocuments/GitHub/Cube/Assets/ProCore/Shared/Code/SixBySeven.dll</HintPath>
