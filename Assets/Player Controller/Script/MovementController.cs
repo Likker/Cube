@@ -36,7 +36,7 @@ public class MovementController : MonoBehaviour {
         timeClimb += Time.deltaTime;
         if (timeClimb < 0.6f)
             transform.position = new Vector3(transform.position.x, transform.position.y + ((distToClimb / 0.6f) * Time.deltaTime), transform.position.z);
-        else if (timeClimb > 0.6f && timeClimb < 1.4f)
+        else if (timeClimb > 0.6f && timeClimb < 0.8f)
             transform.position += transform.forward * Time.deltaTime;
     }
 
@@ -112,6 +112,7 @@ public class MovementController : MonoBehaviour {
                     nextFoot = coll.GetComponentInChildren<Transform>();
                     timeClimb = 0.0f;
                     distToClimb = nextFoot.position.y - foot.position.y + 1.5f;
+                    jumpMove.y = 0.0f;
                 }
        }
     }
