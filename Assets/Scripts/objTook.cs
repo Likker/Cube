@@ -7,7 +7,8 @@ public class objTook : MonoBehaviour {
 
     private bool _on;
     private GameObject _hand;
-	
+    private bool _enable = true;
+
 	// Update is called once per frame
 	void Update () {
         if (_on)
@@ -19,11 +20,13 @@ public class objTook : MonoBehaviour {
 
                 Vector3 translate = _hand.transform.position - transform.position;
 
-                /*if (this.CheckLittleVector(translate, 1.0f) && !this.CheckLittleVector(GetComponent<Rigidbody>().velocity, 15.0f))
-                {*/
-                    GetComponent<Rigidbody>().rigidbody.velocity /= 1.05f;// Vector3.zero;
-                    GetComponent<Rigidbody>().rigidbody.angularVelocity /= 1.05f;// Vector3.zero;
-                //}
+                GetComponent<Rigidbody>().rigidbody.velocity = new Vector3(Mathf.Clamp(GetComponent<Rigidbody>().rigidbody.velocity.x, -3.0f, 3.0f),
+                                                                            Mathf.Clamp(GetComponent<Rigidbody>().rigidbody.velocity.y, -3.0f, 3.0f),
+                                                                            Mathf.Clamp(GetComponent<Rigidbody>().rigidbody.velocity.z, -3.0f, 3.0f));
+                GetComponent<Rigidbody>().rigidbody.angularVelocity = new Vector3(Mathf.Clamp(GetComponent<Rigidbody>().rigidbody.angularVelocity.x, -3.0f, 3.0f),
+                                                                           Mathf.Clamp(GetComponent<Rigidbody>().rigidbody.angularVelocity.y, -3.0f, 3.0f),
+                                                                           Mathf.Clamp(GetComponent<Rigidbody>().rigidbody.angularVelocity.z, -3.0f, 3.0f));
+                  
                 GetComponent<Rigidbody>().AddForce(translate * _speed * Time.deltaTime);
             }
 
@@ -41,20 +44,18 @@ public class objTook : MonoBehaviour {
 
     public void setOn(bool on)
     {
-        _on = on;
+        if (_enable)
+            _on = on;
     }
 
     public void setHand(GameObject hand)
     {
-        _hand = hand;
+        if (_enable)
+            _hand = hand;
     }
 
-    private bool CheckLittleVector(Vector3 vect, float val)
+    public void setEnable(bool enable)
     {
-        if (vect.x > -val && vect.x < val
-            && vect.y > -val && vect.y < val
-            && vect.z > -val && vect.z < val)
-            return (true);
-        return (false);
+        _enable = enable;
     }
 }
