@@ -39,7 +39,7 @@ Material:
       data:
         first:
           name: _BulgeShape
-        second: 5
+        second: 3
       data:
         first:
           name: _BulgeScale

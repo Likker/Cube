@@ -5,7 +5,7 @@ public class Receptacle : MonoBehaviour {
 
     private GameObject obj = null;
 
-    public GameObject toActivate = null;
+    public GameObject[] toActivate = null;
     public float timeToActivate = 5.0f;
 
 	// Use this for initialization
@@ -24,7 +24,10 @@ public class Receptacle : MonoBehaviour {
                 obj.GetComponent<Rigidbody>().angularVelocity *= 1.01f;
             }
             if (timeToActivate <= 0.0f && toActivate != null)
-                toActivate.SetActive(true);
+            {
+                foreach (GameObject tA in toActivate)
+                    tA.SetActive(true);
+            }
         }
 	}
 
