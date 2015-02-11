@@ -15,29 +15,9 @@ public class objTook : MonoBehaviour {
         {
             if (GetComponent<Rigidbody>())
             {
-                //GetComponent<Rigidbody>().isKinematic = true;
-                GetComponent<Rigidbody>().useGravity = false;
-
                 Vector3 translate = _hand.transform.position - transform.position;
 
-                GetComponent<Rigidbody>().rigidbody.velocity = new Vector3(Mathf.Clamp(GetComponent<Rigidbody>().rigidbody.velocity.x, -3.0f, 3.0f),
-                                                                            Mathf.Clamp(GetComponent<Rigidbody>().rigidbody.velocity.y, -3.0f, 3.0f),
-                                                                            Mathf.Clamp(GetComponent<Rigidbody>().rigidbody.velocity.z, -3.0f, 3.0f));
-                GetComponent<Rigidbody>().rigidbody.angularVelocity = new Vector3(Mathf.Clamp(GetComponent<Rigidbody>().rigidbody.angularVelocity.x, -3.0f, 3.0f),
-                                                                           Mathf.Clamp(GetComponent<Rigidbody>().rigidbody.angularVelocity.y, -3.0f, 3.0f),
-                                                                           Mathf.Clamp(GetComponent<Rigidbody>().rigidbody.angularVelocity.z, -3.0f, 3.0f));
-                  
-                GetComponent<Rigidbody>().AddForce(translate * _speed * Time.deltaTime);
-            }
-
-//            transform.Translate(translate * _speed * Time.deltaTime);
-        }
-        else
-        {
-            if (GetComponent<Rigidbody>())
-            {
-                GetComponent<Rigidbody>().useGravity = true;
-                GetComponent<Rigidbody>().isKinematic = false;
+                GetComponent<Rigidbody>().rigidbody.velocity = (GetComponent<Rigidbody>().rigidbody.velocity + (translate * _speed * Time.deltaTime)) / 2.0f;
             }
         }
 	}
@@ -45,8 +25,16 @@ public class objTook : MonoBehaviour {
     public void setOn(bool on)
     {
         if (_enable)
+        {
             _on = on;
+            if (GetComponent<Rigidbody>())
+            {
+                GetComponent<Rigidbody>().useGravity = !on;
+            }
+        }
     }
+
+    public bool getOn() { return (_on); }
 
     public void setHand(GameObject hand)
     {
