@@ -1,0 +1,111 @@
+Initialize engine version: 4.6.2f1 (bd99309c2ad7)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 860M   (ID=0x1392)
+    Vendor:   NVIDIA
+    VRAM:     1976 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Paulo\Documents\GitHub\Cube\Cube_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Paulo\Documents\GitHub\Cube\Cube_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Paulo\Documents\GitHub\Cube\Cube_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Paulo\Documents\GitHub\Cube\Cube_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Paulo\Documents\GitHub\Cube\Cube_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Paulo\Documents\GitHub\Cube\Cube_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Paulo\Documents\GitHub\Cube\Cube_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading C:\Users\Paulo\Documents\GitHub\Cube\Cube_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Paulo\Documents\GitHub\Cube\Cube_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Paulo\Documents\GitHub\Cube\Cube_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Paulo\Documents\GitHub\Cube\Cube_Data\Managed\ProBuilderCore.dll (this message is harmless)
+Loading C:\Users\Paulo\Documents\GitHub\Cube\Cube_Data\Managed\ProBuilderCore.dll into Unity Child Domain
+Platform assembly: C:\Users\Paulo\Documents\GitHub\Cube\Cube_Data\Managed\ProBuilderMeshOps.dll (this message is harmless)
+Loading C:\Users\Paulo\Documents\GitHub\Cube\Cube_Data\Managed\ProBuilderMeshOps.dll into Unity Child Domain
+Platform assembly: C:\Users\Paulo\Documents\GitHub\Cube\Cube_Data\Managed\ProCore.dll (this message is harmless)
+Loading C:\Users\Paulo\Documents\GitHub\Cube\Cube_Data\Managed\ProCore.dll into Unity Child Domain
+Platform assembly: C:\Users\Paulo\Documents\GitHub\Cube\Cube_Data\Managed\SixBySeven.dll (this message is harmless)
+Loading C:\Users\Paulo\Documents\GitHub\Cube\Cube_Data\Managed\SixBySeven.dll into Unity Child Domain
+- Completed reload, in  0.077 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+Platform assembly: C:\Users\Paulo\Documents\GitHub\Cube\Cube_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Paulo\Documents\GitHub\Cube\Cube_Data\Managed\System.Xml.dll (this message is harmless)
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1769)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1769)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1769)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1769)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1769)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1769)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1769)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1769)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1769)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1769)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1769)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1769)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1769)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1769)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1769)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1769)
+
+Platform assembly: C:\Users\Paulo\Documents\GitHub\Cube\Cube_Data\Managed\System.dll (this message is harmless)
+IsolatedStorageException: Could not find a part of the path "C:\Users\Paulo\Documents\GitHub\Cube\Cube_Data\XML\Dialog.xml".
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at System.Xml.XmlUrlResolver.GetEntity (System.Uri absoluteUri, System.String role, System.Type ofObjectToReturn) [0x00000] in <filename unknown>:0 
+  at Mono.Xml2.XmlTextReader.GetStreamFromUrl (System.String url, System.String& absoluteUriString) [0x00000] in <filename unknown>:0 
+  at Mono.Xml2.XmlTextReader..ctor (System.String url, System.Xml.XmlNameTable nt) [0x00000] in <filename unknown>:0 
+  at System.Xml.XmlTextReader..ctor (System.String url, System.Xml.XmlNameTable nt) [0x00000] in <filename unknown>:0 
+  at System.Xml.XmlDocument.Load (System.String filename) [0x00000] in <filename unknown>:0 
+  at WritingEvent.initXML () [0x00000] in <filename unknown>:0 
+  at WritingEvent.Awake () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Platform assembly: C:\Users\Paulo\Documents\GitHub\Cube\Cube_Data\Managed\Boo.Lang.dll (this message is harmless)
