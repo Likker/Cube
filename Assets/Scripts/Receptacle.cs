@@ -51,7 +51,6 @@ public class Receptacle : MonoBehaviour {
             obj.renderer.material.SetFloat("_SliceAmount", obj.renderer.material.GetFloat("_SliceAmount") + (Time.deltaTime / 15.0f));
             yield return 0;
         }
-        //gameObject.GetComponent<Animator>().Play("Close");
         gameObject.animation.Play("Close");
         StartCoroutine("Disapear");
     }

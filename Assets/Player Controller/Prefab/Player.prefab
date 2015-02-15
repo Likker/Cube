@@ -82,7 +82,6 @@ GameObject:
   - 114: {fileID: 11400004}
   - 143: {fileID: 14300000}
   - 114: {fileID: 11488888}
-  - 114: {fileID: 11416820}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -182,7 +181,7 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
-  m_HDR: 0
+  m_HDR: 1
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
@@ -332,22 +331,6 @@ MonoBehaviour:
   blurIterations: 1
   blurType: 0
   fastBloomShader: {fileID: 4800000, guid: 68a00c837b82e4c6d92e7da765dc5f1d, type: 3}
---- !u!114 &11416820
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61c60fb9a655376419467dbd972310c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 0}
-  backgroundText: {fileID: 0}
-  timerBetweenLetter: .0500000007
-  timerBeforeDisappear: 1
-  xmlValue: Introduction
 --- !u!114 &11488888
 MonoBehaviour:
   m_ObjectHideFlags: 1

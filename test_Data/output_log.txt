@@ -30,32 +30,11 @@ Platform assembly: D:\MesDocuments\GitHub\Cube\test_Data\Managed\ProCore.dll (th
 Loading D:\MesDocuments\GitHub\Cube\test_Data\Managed\ProCore.dll into Unity Child Domain
 Platform assembly: D:\MesDocuments\GitHub\Cube\test_Data\Managed\SixBySeven.dll (this message is harmless)
 Loading D:\MesDocuments\GitHub\Cube\test_Data\Managed\SixBySeven.dll into Unity Child Domain
-- Completed reload, in  0.111 seconds
+- Completed reload, in  0.107 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 Platform assembly: D:\MesDocuments\GitHub\Cube\test_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\MesDocuments\GitHub\Cube\test_Data\Managed\System.Xml.dll (this message is harmless)
 Platform assembly: D:\MesDocuments\GitHub\Cube\test_Data\Managed\System.dll (this message is harmless)
-HDR and MultisampleAntiAliasing (in Forward Rendering Path) is not supported. This camera will render without HDR buffers. Disable Antialiasing in the Quality settings if you want to use HDR.
- 
-(Filename:  Line: 2466)
-
-IsolatedStorageException: Could not find a part of the path "D:\MesDocuments\GitHub\Cube\test_Data\XML\Dialog.xml".
-  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
-  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
-  at System.Xml.XmlUrlResolver.GetEntity (System.Uri absoluteUri, System.String role, System.Type ofObjectToReturn) [0x00000] in <filename unknown>:0 
-  at Mono.Xml2.XmlTextReader.GetStreamFromUrl (System.String url, System.String& absoluteUriString) [0x00000] in <filename unknown>:0 
-  at Mono.Xml2.XmlTextReader..ctor (System.String url, System.Xml.XmlNameTable nt) [0x00000] in <filename unknown>:0 
-  at System.Xml.XmlTextReader..ctor (System.String url, System.Xml.XmlNameTable nt) [0x00000] in <filename unknown>:0 
-  at System.Xml.XmlDocument.Load (System.String filename) [0x00000] in <filename unknown>:0 
-  at WritingEvent.initXML () [0x00000] in <filename unknown>:0 
-  at WritingEvent.Awake () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
 Platform assembly: D:\MesDocuments\GitHub\Cube\test_Data\Managed\Boo.Lang.dll (this message is harmless)
-[PKFX] Scene Mesh loaded
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-

@@ -55,8 +55,9 @@ public class WritingEvent : MonoBehaviour {
     void initXML ()
     {
         tbl = timerBetweenLetter;
-        xmlDoc = new XmlDocument();  
-        xmlDoc.Load(Application.dataPath + "/XML/Dialog.xml");
+        TextAsset temp = Resources.Load("Dialog") as TextAsset;
+        xmlDoc = new XmlDocument();
+        xmlDoc.LoadXml(temp.text);
 
         if (xmlDoc == null)
         {
