@@ -49,6 +49,11 @@ public class Receptacle : MonoBehaviour {
         while (obj.renderer.material.GetFloat("_SliceAmount") < 1.0f)
         {
             obj.renderer.material.SetFloat("_SliceAmount", obj.renderer.material.GetFloat("_SliceAmount") + (Time.deltaTime / 15.0f));
+            if (obj.GetComponent<PKFxFX>()){
+                Vector4 color = new Vector4(0.0f, 0.50f - (obj.renderer.material.GetFloat("_SliceAmount") / 2.0f), 1.0f - obj.renderer.material.GetFloat("_SliceAmount"), 1.0f);
+                obj.GetComponent<PKFxFX>().SetAttribute(new PKFxManager.Attribute("ColorFadeIn", color));
+                obj.GetComponent<PKFxFX>().SetAttribute(new PKFxManager.Attribute("ColorFadeOut", color));
+            }
             yield return 0;
         }
         gameObject.animation.Play("Close");

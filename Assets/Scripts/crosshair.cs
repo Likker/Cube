@@ -11,7 +11,7 @@ public class crosshair : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         pos = new Rect((Screen.width - crossHair.texture.width) / 2.0f, (Screen.height - crossHair.texture.height) / 2.0f, crossHair.texture.width, crossHair.texture.height);
-        Screen.showCursor = false;
+        Screen.lockCursor = true;
 	}
 
     void Update()
