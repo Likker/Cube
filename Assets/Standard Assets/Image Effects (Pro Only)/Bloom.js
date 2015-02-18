@@ -45,7 +45,7 @@ class Bloom extends PostEffectsBase {
 	public var bloomIntensity : float = 0.5f;
 	public var bloomThreshhold : float = 0.5f;
 	public var bloomThreshholdColor : Color = Color.white;
-	public var bloomBlurIterations : int = 2;	
+	public var bloomBlurIterations : int = 10;
 		
 	public var hollywoodFlareBlurIterations : int = 2;
 	public var flareRotation : float = 0.0f;

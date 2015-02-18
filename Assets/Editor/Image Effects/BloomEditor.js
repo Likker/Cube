@@ -96,7 +96,7 @@ class BloomEditor extends Editor
 		}
     	EditorGUILayout.Separator ();			
 		
-    		bloomBlurIterations.intValue = EditorGUILayout.IntSlider ("Blur Iterations", bloomBlurIterations.intValue, 1, 4);
+    		bloomBlurIterations.intValue = EditorGUILayout.IntSlider ("Blur Iterations", bloomBlurIterations.intValue, 1, 10);
 			sepBlurSpread.floatValue = EditorGUILayout.Slider (" Sample Distance", sepBlurSpread.floatValue, 0.1, 10.0);
 	    	EditorGUILayout.Separator ();			
  

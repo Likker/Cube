@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class MainRoom_Portal : MonoBehaviour {
 
     public GameObject cubeKey;
+    public GameObject stairs;
 
     public Text[] textToAppear;
     public Image[] imgToAppear;
@@ -30,12 +31,16 @@ public class MainRoom_Portal : MonoBehaviour {
         while (cubeKey.activeSelf == true)
             yield return 0;
         GetComponent<mainPortalBehavior>().enabled = false;
-        while (transform.position.y > 0.0f)
+        while (transform.position.y > -0.28f)
         {
             transform.Translate(Vector3.down * Time.deltaTime);
             yield return 0;
         }
-        
+        while (stairs.transform.position.y < -0.28f)
+        {
+            stairs.transform.Translate(Vector3.up * Time.deltaTime);
+            yield return 0;
+        }
         while (textToAppear[0].color.a < 255)
         {
             foreach (Text t in textToAppear)
