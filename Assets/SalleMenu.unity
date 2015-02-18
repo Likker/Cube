@@ -2038,7 +2038,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11416812, guid: f5a36f8f05924c54a85d71c8ce03bd2a, type: 2}
       propertyPath: timeToWait
-      value: 1
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f5a36f8f05924c54a85d71c8ce03bd2a, type: 2}
@@ -4064,6 +4064,82 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1167837125}
+--- !u!1 &1194541657
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1194541658}
+  - 108: {fileID: 1194541660}
+  - 114: {fileID: 1194541659}
+  m_Layer: 0
+  m_Name: Spotlight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1194541658
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1194541657}
+  m_LocalRotation: {x: .843774915, y: -.104344428, z: .0751146823, w: .521070123}
+  m_LocalPosition: {x: -.270000011, y: -5.96999931, z: -5.53000021}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2101035246}
+  m_RootOrder: 8
+--- !u!114 &1194541659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1194541657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 655018e0fd44172428d32a8fc3ed1f07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubekey: {fileID: 2091981240}
+--- !u!108 &1194541660
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1194541657}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Type: 0
+  m_Color: {r: .79411763, g: .948884368, b: 1, a: 1}
+  m_Intensity: 1.02999997
+  m_Range: 12.6255875
+  m_SpotAngle: 34.0400085
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: .0500000007
+    m_Softness: 4
+    m_SoftnessFade: 1
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_ActuallyLightmapped: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 1
+  m_ShadowSamples: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_IndirectIntensity: 1
+  m_AreaSize: {x: 1, y: 1}
 --- !u!1 &1256970933
 GameObject:
   m_ObjectHideFlags: 0
@@ -5694,7 +5770,6 @@ GameObject:
   - 114: {fileID: 1707813288}
   - 114: {fileID: 1707813287}
   - 114: {fileID: 1707813296}
-  - 114: {fileID: 1707813297}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5871,26 +5946,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossHair: {fileID: 21300000, guid: 95ae741af6d316f469a46149c8b5d8ab, type: 3}
---- !u!114 &1707813297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1707813286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1877048246, guid: ec79681b151069449abd420a394fc9e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HasPostFx: 1
-  m_TextureLODBias: -.5
-  m_ShowAdvancedSettings: 1
-  m_EnableSoftParticles: 1
-  m_EnableDistortion: 1
-  m_EnableBlur: 1
-  m_BlurFactor: .200000003
-  m_UseSceneMesh: 0
-  m_SceneMeshPkmmPath: Meshes/UnityScene.pkmm
 --- !u!1 &1718066486
 GameObject:
   m_ObjectHideFlags: 0
@@ -6846,7 +6901,6 @@ GameObject:
   - 64: {fileID: 2091981241}
   - 114: {fileID: 2091981248}
   - 114: {fileID: 2091981250}
-  - 114: {fileID: 2091981243}
   m_Layer: 0
   m_Name: cubeKey
   m_TagString: Untagged
@@ -6884,43 +6938,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2091981243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2091981240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 325033367, guid: ec79681b151069449abd420a394fc9e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FxAttributesList:
-  - m_Descriptor:
-      Type: 31
-      Name: ColorFadeIn
-      DefaultValue0: .5
-      DefaultValue1: 1
-      DefaultValue2: .100000001
-      DefaultValue3: .5
-    m_Value0: 0
-    m_Value1: .25
-    m_Value2: 1
-    m_Value3: 1
-  - m_Descriptor:
-      Type: 31
-      Name: ColorFadeOut
-      DefaultValue0: .25
-      DefaultValue1: 1
-      DefaultValue2: 1
-      DefaultValue3: 0
-    m_Value0: 0
-    m_Value1: .25
-    m_Value2: 1
-    m_Value3: 1
-  m_PlayOnStart: 1
-  m_FxName: Particles/Fantasy/Fan_BigCastMedusa.pkfx
-  m_BoundFx: {fileID: 102900000, guid: 979a1f44366f15440a01efc486c4039f, type: 3}
 --- !u!23 &2091981244
 Renderer:
   m_ObjectHideFlags: 0
@@ -6987,7 +7004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5664a0d52a649fb43b06d1aab4a01856, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToWait: 1
+  timeToWait: 40
 --- !u!1 &2101035245
 GameObject:
   m_ObjectHideFlags: 0
@@ -7021,6 +7038,7 @@ Transform:
   - {fileID: 623814031}
   - {fileID: 1287165714}
   - {fileID: 1572182969}
+  - {fileID: 1194541658}
   m_Father: {fileID: 0}
   m_RootOrder: 2
 --- !u!1 &2132867281

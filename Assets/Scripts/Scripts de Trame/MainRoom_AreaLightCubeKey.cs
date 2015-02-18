@@ -7,17 +7,17 @@ public class MainRoom_AreaLightCubeKey : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        light.intensity = 0.0f;
+        this.GetComponent<Light>().enabled = false;
         StartCoroutine(trameLight());
 	}
 
     IEnumerator trameLight()
     {
-        while (!cubekey.GetComponent<Rigidbody>().useGravity)
+        while (cubekey.GetComponent<MainRoom_CubeKey>().getTime() > 0.0f)
             yield return 0;
-        GetComponent<Light>().intensity = 0.4f;
+        this.GetComponent<Light>().enabled = true;
         while (!cubekey.GetComponent<objTook>().getOn())
             yield return 0;
-        this.gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 }

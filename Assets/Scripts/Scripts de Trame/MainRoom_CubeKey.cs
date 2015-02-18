@@ -30,4 +30,9 @@ public class MainRoom_CubeKey : MonoBehaviour {
 
         GetComponent<Rigidbody>().useGravity = true;
     }
+
+    public float getTime()
+    {
+        return (timeToWait);
+    }
 }
