@@ -1,5 +1,4 @@
 #define PROTOTYPE
-#define PROTOTYPE
 using UnityEditor;
 using UnityEngine;
 using ProBuilder2.MeshOperations;

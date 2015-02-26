@@ -1,5 +1,4 @@
 #define PROTOTYPE
-#define PROTOTYPE
 using UnityEngine;
 using UnityEditor;
 using ProBuilder2.Common;

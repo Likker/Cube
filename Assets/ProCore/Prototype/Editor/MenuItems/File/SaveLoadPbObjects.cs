@@ -1,5 +1,4 @@
 #define PROTOTYPE
-#define PROTOTYPE
 #if !UNITY_WP8
 
 using UnityEngine;
