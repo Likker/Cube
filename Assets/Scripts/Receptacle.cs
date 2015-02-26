@@ -9,6 +9,8 @@ public class Receptacle : MonoBehaviour {
     public float timeToActivate = 5.0f;
     public float timeToDesactivate = 15.0f;
 
+    public GameObject receptacleFX = null;
+
 	// Use this for initialization
 	void Start () {
         StartCoroutine("ActiveObject");
@@ -49,13 +51,15 @@ public class Receptacle : MonoBehaviour {
         while (obj.renderer.material.GetFloat("_SliceAmount") < 1.0f)
         {
             obj.renderer.material.SetFloat("_SliceAmount", obj.renderer.material.GetFloat("_SliceAmount") + (Time.deltaTime / 15.0f));
-            /*if (obj.GetComponent<PKFxFX>()){
+            if (obj.GetComponent<PKFxFX>()){
                 Vector4 color = new Vector4(0.0f, 0.50f - (obj.renderer.material.GetFloat("_SliceAmount") / 2.0f), 1.0f - obj.renderer.material.GetFloat("_SliceAmount"), 1.0f);
                 obj.GetComponent<PKFxFX>().SetAttribute(new PKFxManager.Attribute("ColorFadeIn", color));
                 obj.GetComponent<PKFxFX>().SetAttribute(new PKFxManager.Attribute("ColorFadeOut", color));
-            }*/
+            }
             yield return 0;
         }
+        if (receptacleFX != null)
+            receptacleFX.GetComponent<PKFxFX>().StopEffect();
         gameObject.animation.Play("Close");
         StartCoroutine("Disapear");
     }

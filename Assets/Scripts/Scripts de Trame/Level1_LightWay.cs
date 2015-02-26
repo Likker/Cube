@@ -6,6 +6,7 @@ public class Level1_LightWay : MonoBehaviour {
     public Transform[] positions;
     public float _duration = 0.1f;
     public float _timetoWait = 3.0f;
+    public bool _destroyAtEnd = false;
 
 	// Use this for initialization
 	void Start () {
@@ -23,7 +24,12 @@ public class Level1_LightWay : MonoBehaviour {
         {
             yield return StartCoroutine(goToPos(t));
         }
-
+        if (_destroyAtEnd)
+        {
+            if (GetComponent<PKFxFX>())
+                GetComponent<PKFxFX>().StopEffect();
+            gameObject.SetActive(false);
+        }
     }
 
     IEnumerator goToPos(Transform t)
