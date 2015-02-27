@@ -17,11 +17,13 @@ public class moveCollider : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {
         other.gameObject.transform.parent = platform.transform;
+        Debug.Log("ENTER");
     }
 
-    void onTriggerExit(Collider other)
+    void OnTriggerExit(Collider other)
     {
         other.gameObject.transform.parent = null;
+        Debug.Log("EXIT");
     }
  
 }
