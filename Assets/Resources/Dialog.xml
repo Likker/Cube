@@ -1,4 +1,6 @@
 ﻿<dialog>
+
+  <MessageReset>La sauvegarde a bien été effacée.</MessageReset>
   
   <Introduction>Bonjour et Bienvenu dans notre programme de réhabilitation. Suite à vos divers crime, votre mémoire à été effacé. Nous vous offrons ici une chance de vous ré-intégrer, n'est-ce pas merveilleux ?</Introduction>
 
