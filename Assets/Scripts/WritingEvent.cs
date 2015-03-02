@@ -101,6 +101,11 @@ public class WritingEvent : MonoBehaviour {
         StartCoroutine("nextSentence");
     }
 
+    public bool isWriting()
+    {
+        return (iterator < sentence.Length);
+    }
+
     IEnumerator nextSentence()
     {
         while ((iterator < sentence.Length) || (tbl > -timeWaitEndSentence))

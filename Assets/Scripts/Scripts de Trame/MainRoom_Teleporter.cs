@@ -3,8 +3,9 @@ using System.Collections;
 
 public class MainRoom_Teleporter : MonoBehaviour {
 
-    private string level = "";
+    public string level = "";
     public float timeBetweenSwitch = 1.5f;
+    public FadeInOut fader;
 
 	// Use this for initialization
 	void Start () {
@@ -41,7 +42,17 @@ public class MainRoom_Teleporter : MonoBehaviour {
         if (coll.CompareTag("Player"))
             if (level != "")
             {
-                Application.LoadLevel(level);
+                if (coll.GetComponent<MovementController>())
+                    coll.GetComponent<MovementController>().enabled = false;
+                StartCoroutine(loadLevel());
             }
+    }
+
+    IEnumerator loadLevel()
+    {
+        while (WritingEvent.instance.isWriting())
+            yield return 0;
+        yield return StartCoroutine(fader.fadeOut());
+        Application.LoadLevel(level);
     }
 }
