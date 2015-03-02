@@ -7,14 +7,9 @@ public class MainRoom_CubeKey : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        if (!PlayerPrefs.HasKey("notFirstGame"))
-        {
-            GetComponent<Rigidbody>().useGravity = false;
-            StartCoroutine("WaitSomeTime");
-            StartCoroutine("MessageCubeKey");
-        }
-        else
-            timeToWait = 0.0f;
+        GetComponent<Rigidbody>().useGravity = false;
+        StartCoroutine("WaitSomeTime");
+        StartCoroutine("MessageCubeKey");
 	}
 	
     IEnumerator MessageCubeKey()

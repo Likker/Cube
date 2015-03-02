@@ -12,8 +12,6 @@ public class MainRoom_Portal : MonoBehaviour {
 
     public float speedToAppear = 400.0f;
 
-    private float reset = 0.0f;
-
 	// Use this for initialization
 	void Start () {
         foreach (Text t in textToAppear)
@@ -25,16 +23,7 @@ public class MainRoom_Portal : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKey(KeyCode.R))
-            reset += Time.deltaTime;
-        else
-            reset = 0.0f;
-        if (reset >= 7.0f)
-        {
-            PlayerPrefs.DeleteAll();
-            WritingEvent.instance.setText("MessageReset");
-            reset = 0.0f;
-        }
+	
 	}
 
     IEnumerator DownPortal()
@@ -65,6 +54,6 @@ public class MainRoom_Portal : MonoBehaviour {
             yield return 0;
         }
 
-        PlayerPrefs.SetInt("notFirstGame", 1);
+
     }
 }

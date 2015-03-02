@@ -30,7 +30,7 @@ public class WritingEvent : MonoBehaviour {
             {
                 _instance = GameObject.FindObjectOfType<WritingEvent>();
 
-               // DontDestroyOnLoad(_instance.gameObject);
+                DontDestroyOnLoad(_instance.gameObject);
             }
             return (_instance);
         }
@@ -41,7 +41,7 @@ public class WritingEvent : MonoBehaviour {
         if (_instance == null)
         {
             _instance = this;
-            //DontDestroyOnLoad(this);
+            DontDestroyOnLoad(this);
 
             this.initXML();
         }
