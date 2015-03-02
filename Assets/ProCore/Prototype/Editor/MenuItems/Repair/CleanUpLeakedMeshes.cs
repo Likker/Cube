@@ -1,4 +1,5 @@
 #define PROTOTYPE
+#define PROTOTYPE
 #if UNITY_5_0_0
 #define UNITY_5
 #endif
