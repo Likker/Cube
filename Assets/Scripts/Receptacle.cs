@@ -37,7 +37,7 @@ public class Receptacle : MonoBehaviour {
     {
         while (timeToActivate > 0.0f)
             yield return 0;
-        if (toActivate != null)
+        if (toActivate.Length > 0)
         {
             foreach (GameObject tA in toActivate)
                 tA.SetActive(true);

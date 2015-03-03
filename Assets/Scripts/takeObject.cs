@@ -37,5 +37,16 @@ public class takeObject : MonoBehaviour {
                 obj = null;
             }
         }
+        else if (Input.GetButtonDown("Fire3"))
+        {
+            if (obj != null)
+            {
+                if (obj.GetComponent<objTook>())
+                {
+                    obj.GetComponent<objTook>().eject(cam.transform.forward.normalized);
+                    obj = null;
+                }
+            }
+        }
 	}
 }

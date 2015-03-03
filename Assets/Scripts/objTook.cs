@@ -34,6 +34,15 @@ public class objTook : MonoBehaviour {
         }
     }
 
+    public void eject(Vector3 dir)
+    {
+        if (_enable)
+        {
+            this.setOn(false);
+            GetComponent<Rigidbody>().rigidbody.velocity = dir * _speed * 0.1f;
+        }
+    }
+
     public bool getOn() { return (_on); }
 
     public void setHand(GameObject hand)
