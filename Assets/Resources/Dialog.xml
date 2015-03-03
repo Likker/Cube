@@ -14,25 +14,19 @@
 
   <GenerateurActive>Bien, vous voyez? Votre cause n'est absolument pas perdu ! Ceci est votre salle de repos, vous pouvez revenir ici à tout moment si vous êtes fatigué. C'est ici que vous pourrez accéder aux diverses épreuves que l'ont vous a préparé.</GenerateurActive>
 
-<<<<<<< HEAD
-  <Level2_Intro>Le but de cette salle reste très simple: vous devez atteindre le téléporteur situé au fond de la salle. Il va falloir être rapide et précis, mais ça ne devrait être qu'une formalité pour vous.</Level2_Intro>
-=======
+ 
   
   <!-- Level de départ avec "maj" run et jump -->
 
   <Level0> Votre test commence maintenant. Vous voyez le portail en face ? C'est votre porte pour la prochaine salle. Vous pouvez courir avec MAJ et sauter avec ESPACE. Bon courage.</Level0>
   
  <!-- Level avec Lumiere au sol (Max)-->
-  
-  <Level1_Intro>Le but de cette salle reste très simple: vous devez atteindre le téléporteur situé au fond de la salle. Il va falloir être rapide et précis, mais ça ne devrait être qu'une formalité pour vous.</Level1_Intro>
->>>>>>> origin/master
 
+  <Level2_Intro>Le but de cette salle reste très simple: vous devez atteindre le téléporteur situé au fond de la salle. Il va falloir être rapide et précis, mais ça ne devrait être qu'une formalité pour vous.</Level2_Intro>
+  
   <Level2_Fail>Et bien ... Rentrez dans la salle de repos, vous ferez surement mieux la prochaine fois.</Level2_Fail>
 
-<<<<<<< HEAD
+
   <Level2_Success>Bravo! Vous avez bien mérité de vous reposer, nous allons vous téléporter.</Level2_Success>
-=======
-  <Level1_Success>Bravo! Vous avez bien mérité de vous reposer, nous allons vous téléporter.</Level1_Success>
   
->>>>>>> origin/master
 </dialog>
