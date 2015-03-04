@@ -44,15 +44,16 @@ public class MainRoom_Teleporter : MonoBehaviour {
             {
                 if (coll.GetComponent<MovementController>())
                     coll.GetComponent<MovementController>().enabled = false;
+                
                 StartCoroutine(loadLevel());
             }
     }
 
     IEnumerator loadLevel()
     {
+        yield return StartCoroutine(fader.fadeOut());
         while (WritingEvent.instance.isWriting())
             yield return 0;
-        yield return StartCoroutine(fader.fadeOut());
         Application.LoadLevel(level);
     }
 }

@@ -49,7 +49,7 @@ public class MainRoom_Portal : MonoBehaviour {
         }
         while (stairs.transform.position.y < -0.28f)
         {
-            stairs.transform.Translate(Vector3.up * Time.deltaTime);
+            stairs.transform.Translate(3.0f * Vector3.up * Time.deltaTime);
             yield return 0;
         }
         while (textToAppear[0].color.a < 255)

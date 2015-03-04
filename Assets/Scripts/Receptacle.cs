@@ -11,10 +11,13 @@ public class Receptacle : MonoBehaviour {
 
     public GameObject receptacleFX = null;
 
+    private float tmpTime;
+
 	// Use this for initialization
 	void Start () {
         StartCoroutine("ActiveObject");
         StartCoroutine("StartDissolving");
+        tmpTime = timeToDesactivate;
 	}
 	
 	// Update is called once per frame
@@ -22,13 +25,13 @@ public class Receptacle : MonoBehaviour {
         if (obj)
         {
             timeToActivate -= Time.deltaTime;
-            timeToDesactivate -= Time.deltaTime;
-            if (obj.GetComponent<Rigidbody>() && timeToDesactivate > 0.0f)
+            tmpTime -= Time.deltaTime;
+            if (obj.GetComponent<Rigidbody>() && tmpTime > 0.0f)
             {
                 obj.GetComponent<Rigidbody>().velocity /= 1.5f;
                 obj.GetComponent<Rigidbody>().angularVelocity *= 1.01f;
             }
-            else if (timeToDesactivate <= 0.0f)
+            else if (tmpTime <= 0.0f)
                 obj.GetComponent<Rigidbody>().angularVelocity /= 1.01f;
         }
 	}
@@ -50,7 +53,7 @@ public class Receptacle : MonoBehaviour {
             yield return 0;
         while (obj.renderer.material.GetFloat("_SliceAmount") < 1.0f)
         {
-            obj.renderer.material.SetFloat("_SliceAmount", obj.renderer.material.GetFloat("_SliceAmount") + (Time.deltaTime / 15.0f));
+            obj.renderer.material.SetFloat("_SliceAmount", obj.renderer.material.GetFloat("_SliceAmount") + (Time.deltaTime / timeToDesactivate));
             if (obj.GetComponent<PKFxFX>()){
                 Vector4 color = new Vector4(0.0f, 0.50f - (obj.renderer.material.GetFloat("_SliceAmount") / 2.0f), 1.0f - obj.renderer.material.GetFloat("_SliceAmount"), 1.0f);
                 obj.GetComponent<PKFxFX>().SetAttribute(new PKFxManager.Attribute("ColorFadeIn", color));

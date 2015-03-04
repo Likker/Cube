@@ -29,4 +29,11 @@
 
   <Level2_Success>Bravo! Vous avez bien mérité de vous reposer, nous allons vous téléporter.</Level2_Success>
   
+  <!-- Level 4-->
+
+  <Level4_Intro>Nous avons remarqué votre habilité à déplacer les cubes d'énergie de façons ... très inhabituelle. Il semblerait que vous puisiez l'énergie du cube pour le déplacer, voyons voir ce dont vous êtes capable avec un cube plus puissant.</Level4_Intro>
+
+  <Level4_Success>Magnifique ! Vous venez de passer ce test avec succès ! Vos pouvoirs sont, vraiment, très interessant. Rentrez vous reposer un peu, nous continuerons les tests quand vous serez prêt.</Level4_Success>
+
+  <Level4_Fail>Vous abandonnez si près du but ? Peut-être n'êtes-vous simplement pas assez intelligent pour ces tests après tout ...</Level4_Fail>
 </dialog>
