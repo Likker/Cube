@@ -4,6 +4,7 @@ using System.Collections;
 public class objTook : MonoBehaviour {
 
     public float _speed = 10.0f;
+    public bool ejectBool = true;
 
     private bool _on;
     private GameObject _hand;
@@ -36,7 +37,8 @@ public class objTook : MonoBehaviour {
 
     public void eject(Vector3 dir)
     {
-        if (_enable)
+        
+        if (_enable && ejectBool)
         {
             this.setOn(false);
             GetComponent<Rigidbody>().rigidbody.velocity = dir * _speed * 0.1f;
