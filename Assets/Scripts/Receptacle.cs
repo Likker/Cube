@@ -43,7 +43,8 @@ public class Receptacle : MonoBehaviour {
         if (toActivate.Length > 0)
         {
             foreach (GameObject tA in toActivate)
-                tA.SetActive(true);
+                if (tag != null)
+                    tA.SetActive(true);
         }
     }
 

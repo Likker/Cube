@@ -6,6 +6,7 @@ public class WriteText : MonoBehaviour {
     public System.String name;
     public bool onStart = false;
     public bool onTrigger = false;
+    public bool catchPlayer = false;
 
 	// Use this for initialization
 	void Start () {
@@ -13,9 +14,12 @@ public class WriteText : MonoBehaviour {
             WritingEvent.instance.setText(name);
 	}
 
-    void OnTriggerEnter()
+    void OnTriggerEnter(Collider coll)
     {
         if (onTrigger)
-            WritingEvent.instance.setText(name);
+        {
+            if ((catchPlayer && coll.CompareTag("Player")) || !catchPlayer)
+                WritingEvent.instance.setText(name);
+        }
     }
 }

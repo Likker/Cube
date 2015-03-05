@@ -29,6 +29,14 @@
 
   <Level2_Success>Bravo! Vous avez bien mérité de vous reposer, nous allons vous téléporter.</Level2_Success>
   
+  <!-- level 3-->
+
+  <Level3_Intro>Combinons exercice physique et reflexion et voyons voir comment vous vous en sortez !</Level3_Intro>
+
+  <Level3_Success>Hum bien, il semblerait que nos tests ne soient pas tout à fait "adaptés" à vos capacités. Retournez en salle de repos tandis que nous réfléchissons à la question.</Level3_Success>
+
+  <Level3_Fail>Avez-vous déjà considérer travailler dans un bureau, derrière un ordinateur ? Pensez-y ...</Level3_Fail>
+  
   <!-- Level 4-->
 
   <Level4_Intro>Nous avons remarqué votre habilité à déplacer les cubes d'énergie de façons ... très inhabituelle. Il semblerait que vous puisiez l'énergie du cube pour le déplacer, voyons voir ce dont vous êtes capable avec un cube plus puissant.</Level4_Intro>
