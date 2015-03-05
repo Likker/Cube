@@ -3,7 +3,7 @@ using System.Collections;
 
 public class WriteText : MonoBehaviour {
 
-    public System.String name;
+    public string name = "";
     public bool onStart = false;
     public bool onTrigger = false;
     public bool catchPlayer = false;
