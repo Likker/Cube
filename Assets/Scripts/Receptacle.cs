@@ -10,6 +10,7 @@ public class Receptacle : MonoBehaviour {
     public float timeToDesactivate = 15.0f;
 
     public GameObject receptacleFX = null;
+    public AudioClip sound;
 
     private float tmpTime;
 
@@ -88,7 +89,7 @@ public class Receptacle : MonoBehaviour {
             coll.GetComponent<objTook>().setHand(this.gameObject);
             coll.GetComponent<objTook>().setOn(true);
             coll.GetComponent<objTook>().setEnable(false);
-
+            audio.PlayOneShot(sound);
             if (obj.GetComponent<Rigidbody>())
             {
                 obj.GetComponent<Rigidbody>().angularVelocity = new Vector3(1.0f, 1.0f, 1.0f);

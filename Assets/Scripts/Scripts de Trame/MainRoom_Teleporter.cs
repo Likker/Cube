@@ -6,6 +6,7 @@ public class MainRoom_Teleporter : MonoBehaviour {
     public string level = "";
     public float timeBetweenSwitch = 1.5f;
     public FadeInOut fader;
+    public AudioClip sound;
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +21,7 @@ public class MainRoom_Teleporter : MonoBehaviour {
     public void setNewLevel(string lvl){
         level = lvl;
         StartCoroutine("switchTelep");
+        audio.PlayOneShot(sound);
     }
 
     IEnumerator switchTelep()

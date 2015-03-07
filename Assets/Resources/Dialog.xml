@@ -44,4 +44,9 @@
   <Level4_Success>Magnifique ! Vous venez de passer ce test avec succès ! Vos pouvoirs sont, vraiment, très interessant. Rentrez vous reposer un peu, nous continuerons les tests quand vous serez prêt.</Level4_Success>
 
   <Level4_Fail>Vous abandonnez si près du but ? Peut-être n'êtes-vous simplement pas assez intelligent pour ces tests après tout ...</Level4_Fail>
+  
+  <!-- Level 5-->
+
+  <Level5_Intro>Voici la dernière salle de préparation avant votre examen final. Je ne prend pas la peine de vous dire que toucher ces lasers n'est pas une bonne idée ...</Level5_Intro>
+  
 </dialog>
