@@ -83,6 +83,7 @@ GameObject:
   - 114: {fileID: 11400004}
   - 143: {fileID: 14300000}
   - 114: {fileID: 11488888}
+  - 82: {fileID: 8230796}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -193,6 +194,64 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_Enabled: 1
+--- !u!82 &8230796
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100008}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: .100000001
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!92 &9200000
 Behaviour:
   m_ObjectHideFlags: 1
@@ -345,10 +404,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HasPostFx: 1
   m_TextureLODBias: -.5
-  m_ShowAdvancedSettings: 1
-  m_EnableSoftParticles: 1
-  m_EnableDistortion: 1
-  m_EnableBlur: 1
+  m_ShowAdvancedSettings: 0
+  m_EnableSoftParticles: 0
+  m_EnableDistortion: 0
+  m_EnableBlur: 0
   m_BlurFactor: .200000003
   m_UseSceneMesh: 0
   m_SceneMeshPkmmPath: Meshes/Level1.pkmm
@@ -365,6 +424,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 2000000}
   hand: {fileID: 100002}
+  TakeObject: {fileID: 8300000, guid: 390ed613731f84c4994765cb7880ba81, type: 3}
+  ThrowObject: {fileID: 8300000, guid: c475d4d1d4ef80446b4a689844feaefe, type: 3}
 --- !u!114 &11488890
 MonoBehaviour:
   m_ObjectHideFlags: 1

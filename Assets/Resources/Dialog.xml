@@ -47,6 +47,18 @@
   
   <!-- Level 5-->
 
-  <Level5_Intro>Voici la dernière salle de préparation avant votre examen final. Je ne prend pas la peine de vous dire que toucher ces lasers n'est pas une bonne idée ...</Level5_Intro>
+  <Level5_Intro>Je ne prend pas la peine de vous dire que toucher ces lasers n'est pas une bonne idée ...</Level5_Intro>
+  
+  <!-- Level 6-->
+
+  <Level6_Intro>Voici la dernière salle de préparation avant votre examen final.</Level6_Intro>
+
+  <Level6_Success>Vous voilà près pour la dernière salle de test, préparez-vous !</Level6_Success>
+  
+  <!-- Level 7-->
+
+  <Level7_Intro>Soyez attentif ! Et créatif, exploitez toutes les possibilitées du cube et de sa manipulation.</Level7_Intro>
+
+  <Level7_Success>Et bien bravo ! Nous avons tout ce qu'il nous faut, nous vous communiquerons les résultats sous peu. En attendant, vous pouvez essayer d'améliorer vos temps dans les différentes salles de test.</Level7_Success>
   
 </dialog>
