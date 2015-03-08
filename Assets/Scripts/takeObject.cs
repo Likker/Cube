@@ -7,6 +7,9 @@ public class takeObject : MonoBehaviour {
     public GameObject hand;
 
     private GameObject obj = null;
+
+    public AudioSource TakeObject;
+    public AudioSource ThrowObject;
         
         // Use this for initialization
 	void Start () {
@@ -28,6 +31,7 @@ public class takeObject : MonoBehaviour {
                         obj = hit.transform.gameObject;
                         obj.GetComponent<objTook>().setOn(true);
                         obj.GetComponent<objTook>().setHand(hand);
+                        TakeObject.Play();
                     }
                 }
             }
@@ -45,6 +49,7 @@ public class takeObject : MonoBehaviour {
                 {
                     obj.GetComponent<objTook>().eject(cam.transform.forward.normalized);
                     obj = null;
+                    ThrowObject.Play();
                 }
             }
         }
