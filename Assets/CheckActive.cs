@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CheckActive : MonoBehaviour {
 
-    public enum Enum { MoveToY, Test2, Test3 };
+    public enum Enum { MoveToY, MoveToZ, Test3 };
 
     //This is what you need to show in the inspector.
     public Enum myEnum;
@@ -21,6 +21,8 @@ public class CheckActive : MonoBehaviour {
         {
             if (myEnum == Enum.MoveToY)
                 this.GetComponent<MoveY>().enabled = true;
+            if (myEnum == Enum.MoveToZ)
+                this.GetComponent<MoveZ>().enabled = true;
         }
         
 	}

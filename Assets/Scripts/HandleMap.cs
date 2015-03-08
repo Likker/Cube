@@ -8,6 +8,7 @@ public class HandleMap : MonoBehaviour {
     public float YUp;
     public float YDown;
     public int timer = 2;
+    public bool opt = false;
 
 
 	// Use this for initialization
@@ -44,12 +45,23 @@ public class HandleMap : MonoBehaviour {
         if (i + 1 < objList.GetLength(0))
         {
             ChangeColor color2 = objList[i + 1].GetComponent<ChangeColor>();
-            color2.color = new Color(0, 1f, 0);
+            color2.color = new Color(0, 0.9f, 0);
             objList[i+1].transform.localPosition = new Vector3(objList[i+1].transform.localPosition.x,
                                                          YUp,
                                                          objList[i+1].transform.localPosition.z);
             
         }
+
+        if (i + 2 < objList.GetLength(0) && opt)
+        {
+            ChangeColor color2 = objList[i + 2].GetComponent<ChangeColor>();
+            color2.color = new Color(0, 1f, 0);
+            objList[i + 2].transform.localPosition = new Vector3(objList[i + 2].transform.localPosition.x,
+                                                         YUp,
+                                                         objList[i + 2].transform.localPosition.z);
+
+        }
+
         if (i > 0)
         {
             ChangeColor color4 = objList[i-1].GetComponent<ChangeColor>();
