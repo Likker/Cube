@@ -13,6 +13,7 @@ public class Receptacle : MonoBehaviour {
     public AudioClip sound;
 
     private float tmpTime;
+    private bool oneSound = true;
 
 	// Use this for initialization
 	void Start () {
@@ -83,8 +84,9 @@ public class Receptacle : MonoBehaviour {
 
     void OnTriggerEnter(Collider coll)
     {
-        if (coll.GetComponent<objTook>())
+        if (coll.GetComponent<objTook>() && oneSound == true)
         {
+            oneSound = false;
             obj = coll.gameObject;
             coll.GetComponent<objTook>().setHand(this.gameObject);
             coll.GetComponent<objTook>().setOn(true);
