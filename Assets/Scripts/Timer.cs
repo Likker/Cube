@@ -17,6 +17,7 @@ public class Timer : MonoBehaviour {
     void OnTriggerEnter()
     {
         activ = false;
+        time = Time.timeSinceLevelLoad;
         if (!PlayerPrefs.HasKey("Timer" + level.ToString()))
             PlayerPrefs.SetFloat("Timer" + level.ToString(), time);
         else
